@@ -23,7 +23,13 @@ input_json_file = "data/test_data.json"
 
 ### Begin Add Code Here ###
 #Open the file specified by input_json_file
+f = open(input_json_file, "r")
 #Use the json module to load the data from the file
+line = f.readline()
+data = json.loads(line)
+f.close()
 #Use make_game_library_from_json(json_data) to convert the data to GameLibrary data
+result = make_game_library_from_json(data)
 #Print out the resulting GameLibrary data using print()
+print(result)
 ### End Add Code Here ###
