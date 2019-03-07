@@ -75,12 +75,14 @@ def make_data_file_from_json(json_data):
     return data_file
 
 #Part 3
+fileName = "data/sunghoch_cc2"
+
 #Load your custom JSON file
-input_json_file = "data/sunghoch_cc1.json"
+input_json_file = fileName + ".json"
 with open(input_json_file, "r") as reader:
     data = json.load(reader)
 #Convert JSON data to cc_data
 data_file = make_data_file_from_json(data)
 #Save converted data to DAT file
-output_dat_file = "data/sunghoch_cc1.dat"
+output_dat_file = fileName + ".dat"
 cc_dat_utils.write_cc_data_to_dat(data_file, output_dat_file)
